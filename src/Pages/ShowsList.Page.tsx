@@ -16,16 +16,16 @@ const ShowListPage: FC<ShowListPageProps> = ({ loading, showsQueryChange, query,
   return (
     <div className="min-h-screen bg-gradient-to-br from-black to-white py-6">
       {/* Search Bar Section */}
-      <div className="container mx-auto px-4">
-        <div className="max-w-3xl mx-auto w-96 flex gap-5 justify-center items-center">
+      <div className="container mx-auto md:px-4">
+        <div className="max-w-3xl mx-auto w-96 flex gap-2 justify-center items-center">
           <SearchBar
             searchref={searchref}
             value={query}
             onChange={(event) => showsQueryChange(event.target.value)}
             placeholder="Search for shows..."
-            className=" p-2 text-lg border-2 border-gray-300 rounded-lg shadow-lg bg-gradient-to-r from-blue-100 via-purple-100 to-pink-100 focus:outline-none focus:border-blue-500 transition-all min-w-[500px]"
+            className=" p-2 text-lg border-2 border-gray-300 rounded-lg shadow-lg bg-gradient-to-r from-blue-100 via-purple-100 to-pink-100 focus:outline-none focus:border-blue-500 transition-all  md:min-w-[500px]"
           />
-          <div className="p-6 h-10 w-10 relative">{loading && <LoadingSpinner className="relative bottom-3 right-2 items-center
+          <div className="p-6 h-10 w-10 relative">{loading && <LoadingSpinner className="relative bottom-4 right-4 items-center
            w-8 h-8 text-black" />}</div>
         </div>
       </div>

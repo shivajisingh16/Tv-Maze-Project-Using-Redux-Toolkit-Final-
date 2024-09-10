@@ -26,7 +26,7 @@ const ShowDetailPage: FC<ShowDetailPageProps> = ({ params, show, loadShow, laodC
   if (!show || !cast) return <div className="text-white text-xl">Loading...</div>;
 
   return (
-    <div className=" bg-gradient-to-br from-gray-900 via-gray-800 to-gray-700 min-h-screen text-white p-10">
+    <div className=" bg-gradient-to-br from-gray-900 via-gray-800 to-gray-700 min-h-screen text-white p-5 md:p-10">
       {/* Back Button */}
       <Link 
   className="flex items-center w-fit text-lg font-semibold bg-gradient-to-r from-purple-500 to-indigo-500 text-gray-200 hover:text-white hover:bg-green-500  px-4 py-2 rounded-lg transition duration-300 ease-in-out transform hover:scale-105 shadow-lg" 
@@ -55,7 +55,7 @@ const ShowDetailPage: FC<ShowDetailPageProps> = ({ params, show, loadShow, laodC
         <img
           src={show.image?.medium || placeHolder}
           alt={show.name}
-          className="object-cover object-center w-full md:w-[300px]  rounded-lg transition-transform transform hover:scale-105 duration-300 ease-in-out w-64"
+          className="object-cover object-center  md:w-[300px]  rounded-lg transition-transform transform hover:scale-105 duration-300 ease-in-out w-64"
         />
 
         {/* Show Summary and Rating */}
@@ -77,7 +77,7 @@ const ShowDetailPage: FC<ShowDetailPageProps> = ({ params, show, loadShow, laodC
         </h4>
 
         {/* Cast Cards with Gradient Background */}
-        <div className="bg-gradient-to-r from-indigo-600 to-purple-600 p-8 rounded-lg shadow-2xl">
+        <div className="bg-gradient-to-r from-indigo-600 to-purple-600 p-2 md:p-8 rounded-lg shadow-2xl">
           <CastCharacters dropdow={true} count={3} cast={cast} />
         </div>
       </div>

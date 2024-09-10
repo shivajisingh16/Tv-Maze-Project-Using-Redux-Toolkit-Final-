@@ -18,8 +18,8 @@ const ShowCard: FC<ShowCardProps> = ({ show }) => {
         className="w-full h-56 object-contain object-center"
       />
        <div className="flex flex-col p-4 bg-black text-white justify-between h-60 gap-2">
-        <h2 className="text-xl font-bold mb-2">{show.name}</h2>
-        <p className="mb-4 line-clamp-5 overflow-y-scroll grow " dangerouslySetInnerHTML={{__html:show.summary! || "No description available."}}></p>
+        <h2 className="text-xl font-bold mb-2 tracking-widest">{show.name.toUpperCase()}</h2>
+        <p className="mb-4 text-gray-400 line-clamp-5 overflow-y-scroll grow " dangerouslySetInnerHTML={{__html:show.summary! || "No description available."}}></p>
       
         <div className="mt-auto">
           <Link
