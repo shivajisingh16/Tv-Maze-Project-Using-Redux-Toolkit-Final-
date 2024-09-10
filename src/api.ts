@@ -5,14 +5,14 @@ export const searchShowsandCasts = async (keyword:String)=>{
   const shows = await axios.get<{show:Show}[]>("https://api.tvmaze.com/search/shows?q="+keyword)
   .then((response) => response.data.map((item) => item.show));
   let casts ={};
-  for(let i=0;i<shows.length;i++){
-    const cast = await axios.get("https://api.tvmaze.com/shows/"+shows[i].id+"/cast").then((response)=>{
-      return response.data.reduce((previous:any,current:any)=>{
-        return [...previous,{id:current.person.id,name:current.person.name,image:{medium:current.person.image?.medium}}]
-      },[])
-    })
-    casts={...casts,[shows[i].id]:cast};
-  }
+  // for(let i=0;i<shows.length;i++){
+  //   const cast = await axios.get("https://api.tvmaze.com/shows/"+shows[i].id+"/cast").then((response)=>{
+  //     return response.data.reduce((previous:any,current:any)=>{
+  //       return [...previous,{id:current.person.id,name:current.person.name,image:{medium:current.person.image?.medium}}]
+  //     },[])
+  //   })
+  //   casts={...casts,[shows[i].id]:cast};
+  // }
   return {shows:shows,casts:casts};
 }
 
