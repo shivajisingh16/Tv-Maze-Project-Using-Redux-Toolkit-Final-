@@ -5,7 +5,7 @@ export const showsStateSelector = (state:State) => state.shows;
 
 export const showsQuerySelector = createSelector(showsStateSelector, (showState) => showState.query);
 
-export const showsMapSelector = createSelector(showsStateSelector,(showState) => showState.shows);
+export const showsMapSelector = createSelector(showsStateSelector,(showState) => showState.entities);
 
 export const showsLoadingSelector = createSelector(showsStateSelector,(showsState)=>showsState.loading);
 

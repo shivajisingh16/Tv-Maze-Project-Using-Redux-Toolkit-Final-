@@ -6,7 +6,7 @@ type NoShowsStateProps={
 const NoShowsState: FC<NoShowsStateProps> = ({searchref}) => {
   const placeHolder = "https://i.pinimg.com/564x/8e/a4/d5/8ea4d5b3ff7452f2a93dcb9d075b3b3e.jpg"
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-900 p-6">
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-black to-blue-900 p-6 rounded-lg">
       <h2 className="text-4xl font-extrabold text-white mb-6">No Shows Available Right Now</h2>
       <p className="text-lg text-gray-300 mb-8">It looks like we don’t have any shows that match your search. How about checking out some of our featured picks?</p>
       
